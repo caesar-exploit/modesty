@@ -2,7 +2,7 @@
   "name": "modesty",
   "version": "1.0.0",
   "description": "Parallel development CSS framework.",
-  "private": false,
+  "private": true,
   "engines": {
     "npm": ">= 8.5.0"
   },
