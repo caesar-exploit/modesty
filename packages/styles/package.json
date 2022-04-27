@@ -1,0 +1,21 @@
+{
+	"name": "styles",
+	"version": "1.0.0",
+	"description": "SCSS Transpilation Area.",
+	"scripts": {
+		"lint": "prettier --write .",
+		"build": "npm-run-all build:modesty --silent",
+		"build:modesty": "npm-run-all css:compile:modesty css:prefix:modesty --silent",
+		"css:compile:modesty": "sass --style compressed --no-source-map --no-error-css scss/:css/",
+		"css:prefix:modesty": "postcss --replace css/*.css css/*/*.css"
+	},
+	"author": "Caesar Exploit <wgetcesar@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"css-declaration-sorter": "^6.2.2",
+		"cssnano": "^5.1.7",
+		"cssnano-preset-advanced": "^5.3.3",
+		"postcss-cli": "^9.1.0"
+	},
+	"type": "module"
+}

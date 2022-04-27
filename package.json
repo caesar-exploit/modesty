@@ -1,0 +1,52 @@
+{
+  "name": "modesty",
+  "version": "1.0.0",
+  "description": "Parallel development CSS framework.",
+  "private": true,
+  "engines": {
+    "npm": ">= 8.5.0"
+  },
+  "scripts": {
+    "dev": "npm-run-all dev:svelte --silent",
+    "build": "npm-run-all build:styles build:svelte --silent",
+    "prepare": "npm-run-all prepare:root prepare:svelte --silent",
+    "lint": "npm-run-all lint:styles lint:svelte --silent",
+    "format": "npm-run-all format:svelte --silent",
+    "dev:svelte": "npm run dev -w svelte",
+    "build:styles": "npm run build -w styles",
+    "build:svelte": "npm run build -w svelte",
+    "prepare:root": "husky install",
+    "prepare:svelte": "npm run prepare -w svelte",
+    "lint:styles": "npm run lint -w styles",
+    "lint:svelte": "npm run lint -w svelte",
+    "format:svelte": "npm run format -w svelte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caesar-exploit/modesty.git"
+  },
+  "keywords": [
+    "css",
+    "css-framework"
+  ],
+  "author": "Caesar Exploit <wgetcesar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caesar-exploit/modesty/issues"
+  },
+  "homepage": "https://github.com/caesar-exploit/modesty#readme",
+  "workspaces": [
+    "packages/styles",
+    "packages/svelte"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "autoprefixer": "^10.4.5",
+    "husky": "^7.0.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "sass": "^1.51.0"
+  }
+}
