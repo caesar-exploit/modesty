@@ -1,3 +1,33 @@
+@use '../utilities/mixins';
+
+$type-decoration: true !default;
+$type-disabled: true !default;
+$type-loading: true !default;
+
 a {
 	color: blue;
+	width: fit-content;
+
+	@if $type-decoration {
+		text-decoration: none;
+	}
+
+	@if $type-disabled {
+		&.dis {
+			@include mixins.disabled;
+		}
+	}
+
+	@if $type-loading {
+		&[aria-busy]::after {
+			content: '';
+			@include mixins.loading;
+		}
+
+		&[aria-busy] {
+			@include mixins.disabled;
+		}
+
+	}
+
 }

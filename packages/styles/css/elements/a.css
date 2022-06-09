@@ -1,1 +1,1 @@
-a{color:blue}
+@-webkit-keyframes a{to{transform:rotate(1turn)}}@keyframes a{to{transform:rotate(1turn)}}a{color:blue;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}a.no-decor{text-decoration:none}a.dis{opacity:.5;pointer-events:none}a[aria-busy]:after{-webkit-animation:a .5s linear infinite;animation:a .5s linear infinite;border:.125em solid rgba(0,0,255,.5);border-radius:50%;border-right-color:transparent;content:"";display:inline-block;margin-inline:.5em;padding:.25em}a[aria-busy]{opacity:.5;pointer-events:none}
